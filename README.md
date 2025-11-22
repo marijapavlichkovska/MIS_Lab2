@@ -24,4 +24,5 @@ Endpoint: https://www.themealdb.com/api/json/v1/1/lookup.php?i={id}
 Додајте копче во AppBar за приказ на рандом рецепт
 Endpoint: https://www.themealdb.com/api/json/v1/1/random.php
 Прикажете целосен рецепт со сите детали
+
 Организирајте го кодот во посебни фајлови и фолдери (models, screens, widgets, services)
