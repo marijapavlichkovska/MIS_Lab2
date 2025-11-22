@@ -16,7 +16,6 @@ class ApiService {
     throw Exception('Failed to load categories');
   }
 
-  // Returns meals from filter.php?c={category}
   Future<List<Meal>> loadMealsByCategory(String category) async {
     final res = await http.get(Uri.parse('$base/filter.php?c=$category'));
     if (res.statusCode == 200) {
@@ -27,7 +26,6 @@ class ApiService {
     throw Exception('Failed to load meals for category $category');
   }
 
-  // lookup.php?i={id}
   Future<MealDetail> fetchMealDetail(String id) async {
     final res = await http.get(Uri.parse('$base/lookup.php?i=$id'));
     if (res.statusCode == 200) {
@@ -39,7 +37,6 @@ class ApiService {
     throw Exception('Failed to load meal detail for id $id');
   }
 
-  // random.php
   Future<MealDetail> fetchRandomMeal() async {
     final res = await http.get(Uri.parse('$base/random.php'));
     if (res.statusCode == 200) {
@@ -86,3 +83,4 @@ class ApiService {
     }
   }
 }
+
